@@ -1,0 +1,47 @@
+what?
+a functionality where user can give vote to the given set of candidates
+
+models?
+routes?
+
+voting app functionality
+
+1. user signin/singup
+2. see the list of candidates
+3. unique votes 
+4. there is a route which shows the list of candidates and their live vote counts sorted by their vote counts
+5.user data must contain their one unique government id proof named: aadhar card number
+6.admin that list the candidates standing in the election and the candidate can not vote at all
+7.user can change their password
+8. user can login only with adhar card number and password.
+9. admin cant vote
+
+-----------------------------------------------------------------------------
+
+Routes
+
+User Authentication:
+     /signup: POST: create a new user account.
+     /login:  POST: Login to an existing account. [aadhar card number + password]
+
+Voting:
+    /candidate: GET = get the list of the candidate
+    /vote/:candidate: POST - vote for a specific candidate
+
+Vote count:
+    /vote/counts: GET - get the list of candidates sorted by their vote counts
+
+User Profile
+     /profile: GET - get the user's profile information
+     /profile/password: PUT: change the user's password
+
+Admin candidate management:
+     /candidates: POST -  Create a new candidate
+     /candidates/:candidateId: PUT- update an existing candidate.
+     /candidates/:candidateId: DELETE - delete a candidate from the list
+
+
+
+
+
+
